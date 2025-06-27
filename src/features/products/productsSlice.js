@@ -9,6 +9,7 @@ export const productsSlice = createSlice({
     productCartCount: 1,
     showCart: false,
     productView: false,
+    isLogedIn: false,
   },
   reducers: {
     addProduct: (state, action) => {
@@ -57,6 +58,9 @@ export const productsSlice = createSlice({
     offProductView: state => {
       state.productView = false;
     },
+    isLogedIn: (state, action) => {
+      state.isLogedIn = action.payload;
+    },
   },
 });
 
@@ -75,6 +79,7 @@ export const {
   productCartCountOne,
   updateCartItemCount,
   clearCart,
+  isLogedIn,
 } = productsSlice.actions;
 
 export default productsSlice.reducer;

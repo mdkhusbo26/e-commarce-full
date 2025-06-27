@@ -10,27 +10,15 @@ let allRous = createBrowserRouter([
   },
   {
     path: '/dashbord',
-    element: (
-      <div className="h-auto  bg-gray-300 flex">
-        <Home />
-      </div>
-    ),
+    element: <Home />,
   },
   {
     path: 'register',
-    element: (
-      <div className="h-auto  bg-gray-300 flex">
-        <Register />
-      </div>
-    ),
+    element: <Register />,
   },
   {
     path: 'Login',
-    element: (
-      <div className="h-auto  bg-gray-300 flex">
-        <Login />{' '}
-      </div>
-    ),
+    element: <Login />,
   },
 ]);
 

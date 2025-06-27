@@ -93,7 +93,7 @@ function ProductList() {
       <div className="lg:hidden">
         <button
           onClick={() => setSmList(prev => !prev)}
-          className={`left-1 text-xl font-semibold top-16 fixed z-50 ${
+          className={`left-1 text-xl font-semibold top-16 fixed z-50 sm:ml-7 ${
             smList ? 'hidden' : ''
           }`}
         >
