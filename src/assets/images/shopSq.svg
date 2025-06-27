@@ -1,0 +1,19 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for the background and text -->
+    <linearGradient id="pinkYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff69b4"/> <!-- Pink -->
+      <stop offset="100%" stop-color="#ffd700"/> <!-- Yellow -->
+    </linearGradient>
+  </defs>
+
+  <!-- Square background -->
+  <rect width="160" height="160" rx="20" fill="url(#pinkYellow)" />
+
+  <!-- Shop name text -->
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Verdana, sans-serif" font-size="48" font-weight="bold"
+        fill="white">
+    sHoP
+  </text>
+</svg>
