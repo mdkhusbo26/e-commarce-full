@@ -20,7 +20,7 @@ function Register() {
       await loginUser(email, password);
       setSuccess('login Successful');
       dispatch(isLogedIn(true));
-      navigate('/dashbord');
+      navigate('/dashboard');
     } catch (error) {
       setError(error.messege || 'Something went wrong');
     }
@@ -29,12 +29,20 @@ function Register() {
   return (
     <div className="h-auto  bg-gray-300 flex">
       <div className="min-h-svh mx-auto w-96 font-serif ">
-        <Link
-          to="/register"
-          className="right-3 absolute bg-pink-200 border-2 mt-3  border-pink-400 p-1 text-cyan-600 rounded-md w-28 text-center"
-        >
-          Register
-        </Link>
+        <div className="right-3 absolute mt-3 flex gap-3">
+          <Link
+            to="/dashboard"
+            className=" bg-pink-200 border-2 border-pink-400 p-1 text-cyan-600 rounded-md w-28 text-center hover:text-slate-600"
+          >
+            Dashboard
+          </Link>
+          <Link
+            to="/register"
+            className=" bg-pink-200 border-2  border-pink-400 p-1 text-cyan-600 rounded-md w-28 text-center hover:text-slate-600"
+          >
+            Register
+          </Link>
+        </div>
         <div className="bg-white mt-20 rounded-lg shadow-xl pb-4">
           <h1 className="text-center text-3xl font-semibold font-serif pt-3 bg-gradient-to-r from-blue-500 to-pink-400 bg-clip-text text-transparent ">
             Login

@@ -24,7 +24,7 @@ function Navbar() {
       await logoutUser();
       setIsSuccess('logout Successful');
       dispatch(isLogedIn(false));
-      navigate('/dashbord');
+      navigate('/dashboard');
     } catch (error) {
       setIsSuccess(error.message || 'Something went wrong');
     }
@@ -50,7 +50,7 @@ function Navbar() {
           </li>
           <li
             onClick={() => clickLogout()}
-            className="bg-pink-200 border-2 border-pink-400 my-auto p-1 text-cyan-600 rounded-md"
+            className="bg-pink-200 border-2 border-pink-400 my-auto p-1 text-cyan-600 rounded-md cursor-pointer"
           >
             Logout
           </li>

@@ -6,10 +6,10 @@ import { createBrowserRouter, Navigate } from 'react-router-dom';
 let allRous = createBrowserRouter([
   {
     path: '/',
-    element: <Navigate to="/dashbord" replace />,
+    element: <Navigate to="/dashboard" replace />,
   },
   {
-    path: '/dashbord',
+    path: '/dashboard',
     element: <Home />,
   },
   {
