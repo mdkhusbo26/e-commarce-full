@@ -24,7 +24,7 @@ function Navbar() {
       await logoutUser();
       setIsSuccess('logout Successful');
       dispatch(isLogedIn(false));
-      navigate('/dashboard');
+      navigate('/login');
     } catch (error) {
       setIsSuccess(error.message || 'Something went wrong');
     }

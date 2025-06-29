@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { registerUser } from '../api/auth';
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ function Register() {
   });
   const [status, setStatus] = useState('');
 
-  // let navigate = useNavigate();
+  let navigate = useNavigate();
 
   const handleChange = e => {
     const { name, value, files } = e.target;
@@ -45,6 +46,7 @@ function Register() {
       const result = await registerUser(data);
       setStatus('Registration successful!');
       console.log(result);
+      navigate('/login');
     } catch (err) {
       setStatus(err.message || 'Registration failed');
       alert('Registation failed');
@@ -72,7 +74,7 @@ function Register() {
           <h1 className="text-center text-3xl font-semibold font-serif pt-3 bg-gradient-to-r from-blue-500 to-pink-400 bg-clip-text text-transparent ">
             Register
           </h1>
-          <form onSubmit={e => handleSubmit(e)} className=" flex flex-col px-4">
+          <form onSubmit={handleSubmit} className=" flex flex-col px-4">
             <label className="text-lg font-medium text-cyan-600 pt-1 pl-1">
               Email
             </label>

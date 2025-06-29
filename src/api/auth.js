@@ -24,8 +24,10 @@ const logoutUser = async () => {
 
 const registerUser = async data => {
   try {
-    const response = await axiosInstance.post('/register', {
-      data,
+    const response = await axiosInstance.post('/register', data, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
     });
     return response.data;
   } catch (error) {
