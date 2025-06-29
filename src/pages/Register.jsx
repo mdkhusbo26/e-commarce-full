@@ -28,7 +28,6 @@ function Register() {
   const handleSubmit = async e => {
     e.preventDefault();
 
-    // Create FormData
     const data = new FormData();
     data.append('username', formData.username);
     data.append('fullName', formData.fullName);
@@ -36,11 +35,6 @@ function Register() {
     data.append('password', formData.password);
     data.append('avatar', formData.avatar);
     data.append('coverImage', formData.coverImage);
-
-    // Debug: Print form content
-    for (let [key, value] of data.entries()) {
-      console.log(`${key}:`, value);
-    }
 
     try {
       const result = await registerUser(data);
